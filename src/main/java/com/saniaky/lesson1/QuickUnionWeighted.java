@@ -1,6 +1,13 @@
 package com.saniaky.lesson1;
 
 /**
+ * Weighted Quick Union with Path Compression
+ *
+ * <p> Cost model:
+ * <li>Initialize - N
+ * <li>Union - lg(N) (Worst case)
+ * <li>Find - lg(N) (Worst case)
+ *
  * @author saniaky
  * @since 2/19/17
  */
@@ -13,13 +20,15 @@ public class QuickUnionWeighted {
     public QuickUnionWeighted(int N) {
         id = new int[N];
         size = new int[N];
+
+        // Initialize nodes
         for (int i = 0; i < N; i++) {
             id[i] = i;
             size[i] = 1;
         }
     }
 
-    public void uion(int p, int q) {
+    public void union(int p, int q) {
         int root1 = findRoot(p);
         int root2 = findRoot(q);
 
@@ -38,6 +47,8 @@ public class QuickUnionWeighted {
 
     private int findRoot(int i) {
         while (i != id[i]) {
+            // Add path compression
+            // Make every other node in path point to its grandparent (thereby halving path length).
             id[i] = id[id[i]];
             i = id[i];
         }

@@ -13,7 +13,7 @@ public class QuickUnionWeightedTest {
     public void test() {
         QuickUnionWeighted uf = new QuickUnionWeighted(10);
 
-        uf.uion(1, 4);
+        uf.union(1, 4);
 
         Assert.assertTrue(uf.isConnected(1, 4));
         Assert.assertFalse(uf.isConnected(1, 5));

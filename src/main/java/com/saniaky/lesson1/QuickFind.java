@@ -1,6 +1,13 @@
 package com.saniaky.lesson1;
 
 /**
+ * Quick Find
+ *
+ * <p> Cost model:
+ * <li>Initialize - N
+ * <li>Union - N
+ * <li>Find - 1
+ *
  * @author saniaky
  * @since 2/17/17
  */
@@ -16,7 +23,7 @@ public class QuickFind {
         }
     }
 
-    public void uion(int a, int b) {
+    public void union(int a, int b) {
         if (array[a] == array[b]) {
             return;
         }

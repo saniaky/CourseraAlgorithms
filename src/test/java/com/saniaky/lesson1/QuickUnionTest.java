@@ -13,7 +13,7 @@ public class QuickUnionTest {
     @Test
     public void test() {
         QuickUnion uf = new QuickUnion(10);
-        uf.uion(1, 4);
+        uf.union(1, 4);
         assertTrue(uf.isConnected(1, 4));
         assertFalse(uf.isConnected(1, 5));
     }

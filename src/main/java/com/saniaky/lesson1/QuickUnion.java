@@ -1,6 +1,13 @@
 package com.saniaky.lesson1;
 
 /**
+ * Quick Union
+ *
+ * <p> Cost model:
+ * <li>Initialize - N
+ * <li>Union - N
+ * <li>Find - N
+ *
  * @author saniaky
  * @since 2/19/17
  */
@@ -16,7 +23,7 @@ public class QuickUnion {
         }
     }
 
-    public void uion(int p, int q) {
+    public void union(int p, int q) {
         int root1 = findRoot(p);
         int root2 = findRoot(q);
         id[root1] = root2;

@@ -13,7 +13,7 @@ public class QuickFindTest {
     public void test() {
         QuickFind uf = new QuickFind(10);
 
-        uf.uion(1, 4);
+        uf.union(1, 4);
 
         Assert.assertTrue(uf.isConnected(1, 4));
         Assert.assertFalse(uf.isConnected(1, 5));
